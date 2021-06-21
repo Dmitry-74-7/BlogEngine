@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+   http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+  <changeSet id="posts-1" author="Dmitry">
+    <insert tableName="posts">
+      <column name="id" value="1"/>
+      <column name="is_active" value="1"/>
+      <column name="moderation_status" value="ACCEPTED"/>
+      <column name="moderator_id" value="1"/>
+      <column name="user_id" value="1"/>
+      <column name="time" value="2021-05-09 1:10:10"/>
+      <column name="title" value="Не выводится значение переменной метода в методе main()"/>
+      <column name="text" value="В классе определен метод который считывает символы из файла в переменную и выводит её. Далее вызывается в методе main через экземпляр класса, но на экран почему-то ничего не выводит. Пытался и возвращать из него её, и создавать отдельную переменную и присваивать ей значение - ни в какую. Что я не учёл?"/>
+      <column name="view_count" value="2"/>
+    </insert>
+
+    <insert tableName="posts">
+      <column name="id" value="2"/>
+      <column name="is_active" value="1"/>
+      <column name="moderation_status" value="ACCEPTED"/>
+      <column name="moderator_id" value="1"/>
+      <column name="user_id" value="1"/>
+      <column name="time" value="2021-05-09 2:10:10"/>
+      <column name="title" value="Перевести с языка С++ в java"/>
+      <column name="text" value="Дайте пример, Пожалуйста! Не получается ничего подобного найти"/>
+      <column name="view_count" value="3"/>
+    </insert>
+
+    <insert tableName="posts">
+      <column name="id" value="3"/>
+      <column name="is_active" value="1"/>
+      <column name="moderation_status" value="ACCEPTED"/>
+      <column name="moderator_id" value="2"/>
+      <column name="user_id" value="1"/>
+      <column name="time" value="2021-05-09 3:10:10"/>
+      <column name="title" value="Удалить все элементы"/>
+      <column name="text" value="Как сделать метод, который будет удалять все элементы из потока, я не пойму какой командой удалять элементы?"/>
+      <column name="view_count" value="2"/>
+    </insert>
+
+    <insert tableName="posts">
+      <column name="id" value="4"/>
+      <column name="is_active" value="1"/>
+      <column name="moderation_status" value="ACCEPTED"/>
+      <column name="moderator_id" value="1"/>
+      <column name="user_id" value="2"/>
+      <column name="time" value="2021-05-10 4:10:10"/>
+      <column name="title" value="Требуется код REST сервиса, возвращающего серверное время"/>
+      <column name="text" value="Требуется код REST сервиса, возвращающего серверное время помогите, кто может?"/>
+      <column name="view_count" value="5"/>
+    </insert>
+
+    <insert tableName="posts">
+      <column name="id" value="5"/>
+      <column name="is_active" value="1"/>
+      <column name="moderation_status" value="ACCEPTED"/>
+      <column name="moderator_id" value="1"/>
+      <column name="user_id" value="2"/>
+      <column name="time" value="2021-04-09 7:10:10"/>
+      <column name="title" value="Как ввести значения переменных с консоли через пробел?"/>
+      <column name="text" value="Подскажите пожалуйста как ввести переменные через пробел в JAVA?"/>
+      <column name="view_count" value="3"/>
+    </insert>
+
+    <insert tableName="posts">
+      <column name="id" value="6"/>
+      <column name="is_active" value="1"/>
+      <column name="moderation_status" value="ACCEPTED"/>
+      <column name="moderator_id" value="1"/>
+      <column name="user_id" value="2"/>
+      <column name="time" value="2020-04-09 7:10:10"/>
+      <column name="title" value="Найти количество отрезков, используя цикл"/>
+      <column name="text" value="Уважаемые товарищи! Помогите решить задачу пожалуйста. Даны два целых положительных числа length, section. length это расстояние. Вам нужно не используя операцию деления найти сколько раз отрезок длиной section помещает в length. Нужно использовать цикл while"/>
+      <column name="view_count" value="3"/>
+    </insert>
+
+    <insert tableName="posts">
+      <column name="id" value="7"/>
+      <column name="is_active" value="1"/>
+      <column name="moderation_status" value="ACCEPTED"/>
+      <column name="moderator_id" value="1"/>
+      <column name="user_id" value="3"/>
+      <column name="time" value="2021-05-10 4:10:10"/>
+      <column name="title" value="Не могу сделать вывод товаров на экран пользователю, в виде чека"/>
+      <column name="text" value="Всем привет.
+Не могу решить до конца задачу на курсе.
+Суть задачи в наполнении продуктовой корзины и подсчету окончательной суммы.
+Весь функционал сделала, а вывести как надо не могу."/>
+      <column name="view_count" value="5"/>
+    </insert>
+
+    <insert tableName="posts">
+      <column name="id" value="8"/>
+      <column name="is_active" value="1"/>
+      <column name="moderation_status" value="ACCEPTED"/>
+      <column name="moderator_id" value="1"/>
+      <column name="user_id" value="3"/>
+      <column name="time" value="2021-04-09 7:10:10"/>
+      <column name="title" value="Как работает оператор остатка от деления?"/>
+      <column name="text" value="Как работает оператор остатка от деления? Не получается разобраться"/>
+      <column name="view_count" value="30"/>
+    </insert>
+
+    <insert tableName="posts">
+      <column name="id" value="9"/>
+      <column name="is_active" value="1"/>
+      <column name="moderation_status" value="ACCEPTED"/>
+      <column name="moderator_id" value="1"/>
+      <column name="user_id" value="3"/>
+      <column name="time" value="2020-04-09 7:10:10"/>
+      <column name="title" value="Поменять значения местами в массиве"/>
+      <column name="text" value="В данном массиве целых чисел nums меняют местами значения первого и последнего элементов массива, второго и предпоследнего и т. Д., Если два обмененных значения четны."/>
+      <column name="view_count" value="15"/>
+    </insert>
+
+  </changeSet>
+</databaseChangeLog>

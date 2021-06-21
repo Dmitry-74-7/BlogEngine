@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+   http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+  <include  file="db/changelog/db.users.xml"/>
+  <include  file="db/changelog/db.posts.xml"/>
+  <include  file="db/changelog/db.post_votes.xml"/>
+  <include  file="db/changelog/db.tags.xml"/>
+  <include  file="db/changelog/db.tag2post.xml"/>
+  <include  file="db/changelog/db.post_comments.xml"/>
+  <include  file="db/changelog/db.captcha_codes.xml"/>
+  <include  file="db/changelog/db.global_settings.xml"/>
+
+  <!--  start data -->
+  <include  file="db/changelog/start_data/db.start_data.users.xml"/>
+  <include  file="db/changelog/start_data/db.start_data.tags.xml"/>
+  <include  file="db/changelog/start_data/db.start_data.captcha_codes.xml"/>
+  <include  file="db/changelog/start_data/db.start_data.global_settings.xml"/>
+
+  <include  file="db/changelog/start_data/db.start_data.posts.xml"/>
+  <include  file="db/changelog/start_data/db.start_data.post_votes.xml"/>
+  <include  file="db/changelog/start_data/db.start_data.tag2post.xml"/>
+  <include  file="db/changelog/start_data/db.start_data.post_comments.xml"/>
+
+
+</databaseChangeLog>

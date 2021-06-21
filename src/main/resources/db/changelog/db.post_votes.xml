@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+   http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+  <changeSet author="Dmitry" id="post_votes-1">
+    <createTable tableName="post_votes">
+      <column autoIncrement="true" name="id" type="INT">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="user_id" type="INT">
+        <constraints nullable="false"/>
+      </column>
+      <column name="post_id" type="INT">
+        <constraints nullable="false"/>
+      </column>
+      <column name="time" type="DATETIME">
+        <constraints nullable="false"/>
+      </column>
+      <column name="value" type="TINYINT">
+        <constraints nullable="false"/>
+      </column>
+    </createTable>
+
+    <!-- create foreign key -->
+    <addForeignKeyConstraint baseColumnNames="user_id"
+      baseTableName="post_votes"
+      constraintName="fk_post_votes_user_id"
+      referencedColumnNames="id"
+      referencedTableName="users"/>
+    <addForeignKeyConstraint baseColumnNames="post_id"
+      baseTableName="post_votes"
+      constraintName="fk_post_votes_post_id"
+      referencedColumnNames="id"
+      referencedTableName="posts"/>
+  </changeSet>
+
+</databaseChangeLog>
